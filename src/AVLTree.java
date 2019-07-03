@@ -63,7 +63,7 @@ public class AVLTree {
             }else if(curHeight <= height)
                 sb.append("null,");
 
-            if(curHeight+1 <= height) {
+            if(curNode != null && curHeight+1 <= height) {
                 Map.Entry<Integer, Node> leftEntry = new AbstractMap.SimpleEntry<>(curHeight + 1, curNode.left);
                 q.add(leftEntry);
                 Map.Entry<Integer, Node> rightEntry = new AbstractMap.SimpleEntry<>(curHeight + 1, curNode.right);
