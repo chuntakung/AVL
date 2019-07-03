@@ -101,11 +101,11 @@ public class AVLTree {
         r.height = Math.max((r.left!= null)? r.left.height:0, (r.right != null)? r.right.height:0) + 1;
 
         int balFactor = getBalance(r);
-        if(balFactor > 1 && key > r.left.val){
+        if(balFactor > 1 && key < r.left.val){
             return rightRotate(r);
         }
 
-        if(balFactor > 1 && key < r.left.val){
+        if(balFactor > 1 && key > r.left.val){
             r.left = leftRotate(r.left);
             return rightRotate(r);
         }
